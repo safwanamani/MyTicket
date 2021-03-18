@@ -1,0 +1,8 @@
+.navbar {
+  background: #136a8a; /* fallback for old browsers */
+  background: linear-gradient(to right, #136a8a, #267871) !important; /* Chrome 10-25, Safari 5.1-6 */
+}
+.navbar-brand {
+  font-family: 'RocknRoll One', sans-serif;
+  font-size: 1.8rem;
+}
