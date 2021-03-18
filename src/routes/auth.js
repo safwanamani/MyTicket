@@ -1,8 +1,8 @@
 const express = require('express');
+const { GetTotalTickets, AddTickets } = require('../controllers/auth');
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    res.send("Hello from Server")
-})
+router.get("/", GetTotalTickets);
+router.post("/add", AddTickets);
 
 module.exports = router;
