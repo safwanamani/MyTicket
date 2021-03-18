@@ -6,3 +6,29 @@
   font-family: 'RocknRoll One', sans-serif;
   font-size: 1.8rem;
 }
+.form-title{
+  text-align: center;
+}
+.form-ticket {
+  margin: auto;
+}
+.form-control {
+  width: 33%;
+}
+.col-label {
+  margin-bottom: 1rem;
+}
+.col-control {
+  text-align: -webkit-right;
+}
+.form-button {
+  text-align: center;
+}
+.form-button .btn {
+  background: linear-gradient(to right, #136a8a, #267871) !important;
+  color: #fff;
+  border-color: none; 
+}
+.form-button .btn:hover {
+  background: linear-gradient(to right, #267871, #136a8a) !important;
+}
