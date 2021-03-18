@@ -3,7 +3,7 @@ import axios from "axios";
 import Layout from "../components/Layout";
 import {Container, Row, Col, Form} from "react-bootstrap";
 import Input from "../components/Input";
-import Formtitle from "../components/Formtitle";
+import FormTitle from "../components/FormTitle";
 import FormButton from "../components/FormButton";
 
 function Booked(props) {
@@ -17,7 +17,7 @@ function Booked(props) {
     useEffect(() => {
         const source = axios.CancelToken.source();
 
-        axios.get("http://localhost:4000/api/", {
+        axios.get("/myticket/", {
             cancelToken: source.token,
         }).then(response => {
             setTotalTickets(response.data[0].totalTickets);
@@ -36,7 +36,7 @@ function Booked(props) {
     useEffect(() => {
         const source = axios.CancelToken.source();
 
-        axios.get("http://localhost:4000/api/booked", {
+        axios.get("/myticket/booked", {
             cancelToken: source.token,
         }).then(response => {
             setBookedTickets(response.data[0].bookedTicket);
@@ -62,7 +62,7 @@ function Booked(props) {
 
     const cancelTicket = (event) => {
         if (bookedTickets >= cancelTickets.cancelTicket) {
-            axios.post('http://localhost:4000/api/cancelticket', cancelTickets)
+            axios.post('/myticket/cancelticket', cancelTickets)
             .then((data) => {
                 console.log(data);
 
@@ -82,7 +82,7 @@ function Booked(props) {
             <Container>
                 <Row>
                     <Col md={4} className="form-ticket pt-5" >
-                        <Formtitle 
+                        <FormTitle 
                             title="My Booking"
                         />
                         <Form>

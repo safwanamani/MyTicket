@@ -21,6 +21,9 @@
 .col-control {
   text-align: -webkit-right;
 }
+.text-muted {
+  color: red !important;
+}
 .form-button {
   text-align: center;
 }

@@ -16,7 +16,7 @@ function Home(props) {
     useEffect(() => {
         const source = axios.CancelToken.source();
 
-        axios.get("http://localhost:4000/api/", {
+        axios.get("/myticket/", {
             cancelToken: source.token,
         }).then(response => {
             setTotalTickets(response.data[0].totalTickets);
@@ -43,7 +43,7 @@ function Home(props) {
     const bookTicket = (event) => {
 
         if (totalTickets >= bookedTicket.bookedTicket) {
-            axios.post('http://localhost:4000/api/bookticket', bookedTicket)
+            axios.post('/myticket/bookticket', bookedTicket)
                 .then((data) => {
                     console.log(data);
 
